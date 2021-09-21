@@ -82,7 +82,7 @@ contract NEFI is ERC20Votes, ERC20Burnable, Pausable, Ownable {
 
     /** Mint */
     function mint(address to, uint256 amount)
-        public
+        external
         whenNotPaused
         onlyUnlocked
         onlyGov
@@ -97,15 +97,15 @@ contract NEFI is ERC20Votes, ERC20Burnable, Pausable, Ownable {
     }
 
     function mintFromLocker(address to, uint256 amount)
-        public
+        external
         whenNotPaused
         whenPassMinLock
         onlyNetefiLocker
     {
         require(to != address(0), "NEFI: to address invalid");
         require(amount > 0 && amount <= LOCKED_AMOUNT, "NEFI: amount invalid");
-        super._mint(to, amount);
         LOCKED_AMOUNT = LOCKED_AMOUNT - amount;
+        super._mint(to, amount);
     }
 
     /** partner && gov && locker */

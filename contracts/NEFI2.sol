@@ -24,7 +24,7 @@ import "./ERC20Votes.sol";
 import "./ERC20Burnable.sol";
 import "./Pausable.sol";
 
-contract NEFI is ERC20Votes, ERC20Burnable, Pausable, Ownable {
+contract NEFI2 is ERC20Votes, ERC20Burnable, Pausable, Ownable {
     bool isPartnerUnlocked = false;
     bool isOwnerUnlocked = false;
 

@@ -1,0 +1,28 @@
+{
+  "name": "netefi-token-contract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netefi/netefi-token-contract.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/netefi/netefi-token-contract/issues"
+  },
+  "homepage": "https://github.com/netefi/netefi-token-contract#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.3",
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "@truffle/hdwallet-provider": "^1.7.0",
+    "mocha": "^9.1.3"
+  }
+}

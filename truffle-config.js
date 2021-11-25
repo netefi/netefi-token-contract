@@ -1,7 +1,7 @@
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 const fs = require("fs");
-//const mnemonic = fs.readFileSync(".secret-mainnet-netefi").toString().trim();
-const mnemonic = fs.readFileSync(".secret-testnet").toString().trim();
+const mnemonic = fs.readFileSync(".secret-mainnet-netefi").toString().trim();
+//const mnemonic = fs.readFileSync(".secret-testnet").toString().trim();
 
 /**
  * Use this file to configure your truffle project. It's seeded with some
@@ -65,7 +65,7 @@ module.exports = {
     },
     bsc: {
       provider: () =>
-        new HDWalletProvider(mnemonic, `https://bsc-dataseed1.binance.org`),
+        new HDWalletProvider(mnemonic, "https://bsc-dataseed.binance.org"),
       network_id: 56,
       confirmations: 10,
       timeoutBlocks: 200,
